@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login | Hotspot</title>
+
+  <!-- CSS  -->
+  <link href="css/font.css" rel="stylesheet">
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+<style type="text/css">
+html,
+body {
+    height: 100%;
+}
+.margin {
+  margin: 0 !important;
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+</style>
+</head>
+<body>
+
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+
+<!-- Menu Top Navbar -->
+  <nav class="light-red darken-3 z-depth-2" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo" style="font-size:20px;"><i class="material-icons left">perm_identity</i>Sinasfe-sp Hotspot</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#modal2" class="modal-trigger">Fale Conosco</a></li>
+		
+      </ul>
+    </div>  
+  </nav>
+  
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center red-text">BEM VINDO AO SINASEFE-SP</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Já é Cadastrado Fasa seu Login</h5>
+      </div>
+      <div class="row center">
+	  <div class="col s12 m4 l2"><p></p></div>
+		<div class="col s12 m4 l8" style="border: 1px solid #e0e0e0;padding: 20px;" >
+		<form class="login-form" name="login" action="$(link-login-only)" method="post"
+				$(if chap-id) onSubmit="return doLogin()" $(endif)>
+		
+				<input type="hidden" name="dst" value="$(link-orig)" />
+				<input type="hidden" name="popup" value="true" />
+				
+				<div class="row margin">
+				  <div class="input-field">
+					<i class="material-icons prefix">perm_identity</i>
+					<input id="username" type="text" name="username" value=>
+					<label for="username">Usúario</label>
+				  </div>
+				</div>
+				
+				<div class="row margin">
+				  <div class="input-field">
+					<i class="material-icons prefix">lock</i>
+					<input id="password" type="password" name="password">
+					<label for="password">Senha</label>
+				  </div>
+				</div>
+				
+				<div class="row margin">
+				  <div class="input-field">
+					<button type="submit" class="btn-large waves-effect waves-light red">Login</button>
+				  </div>				
+				</div>
+				
+				<div class="row">
+				  <div class="input-field">
+					  <p class="margin medium-small"><a href="#modal1" class="modal-trigger">Acesse Gratis!</a></p>
+				  </div>
+				  <div class="input-field">
+					  
+					  $(if trial == 'yes')
+					  <p class="margin right-align medium-small">
+						<a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">Clique Aqui</a>
+					  </p>
+					  $(endif)
+					  
+				  </div>          
+				</div>
+			</form>
+		</div>
+		<div class="col s12 m4 l2"><p></p></div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+
+
+  <footer class="page-footer light-red darken-3 z-depth-5">
+    <div class="container">
+      <div class="row">
+        <div class="col l12 s12">
+          <h5 class="white-text">Nossa História</h5>
+          <p class="grey-text text-lighten-4">O SINASEFE tem como princípio fundamental a defesa dos interesses da categoria que representa e a luta em defesa da educação pública de qualidade, gratuita e laica, com referência social e em consonância com os interesses da classe trabalhadora. Missão indissociável da liberdade de pensamento como direito inalienável do cidadão e que tem como compromissos desenvolver, organizar e apoiar, nos aspectos políticos, educacionais, econômicos, sociais e culturais, todas as ações que visem ás conquistas de melhores condições na educação, de vida e de trabalho para toda a Classe Trabalhadora..</p>
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer-copyright light-red darken-4">
+      <div class="container ">
+      &copy 2018 Sinasefe. All rights reserved |
+      </div>
+    </div>
+  </footer>
+
+	<!-- Modal Structure -->
+	 <div id="modal1" class="modal">
+			<div class="modal-content">
+			  <h4>Sinasefe-sp Hotspot</h4>
+			  <p>Sindicato Nacional dos Servidores Federais da Educação Básica, Profissional e Tecnológica.</p>
+			  <table class="striped">
+			  <tr>
+				<td><i class="material-icons">announcement</i></td>
+				<td>Para aceso grátis por 3 horas peça seu ticket na sede do sinasefe-sp</td>
+			  </tr>
+			  <tr>
+				<td><i class="material-icons">cloud_done</i></td>
+				<td>PELO QUE LUTAMOS NO SINASEFE
+​
+
+O SINASEFE tem como princípio fundamental a defesa dos interesses da categoria que representa e a luta em defesa da educação pública de qualidade, gratuita e laica, com referência social e em consonância com os interesses da classe trabalhadora. Missão indissociável da liberdade de pensamento como direito inalienável do cidadão e que tem como compromissos desenvolver, organizar e apoiar, nos aspectos políticos, educacionais, econômicos, sociais e culturais, todas as ações que visem às conquistas de melhores condições na educação, de vida e de trabalho para toda a Classe Trabalhadora.</td>
+			  </tr>
+			  <tr>
+				<td style="width:30px;"><i class="material-icons">business</i></td>
+				<td>Rua Pedro Vicente, 625  Canindé - São Paulo SP  CEP 01109-010</td>
+			  </tr>
+			</table>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons left">thumb_up</i>OK</a>
+			</div>	
+     </div>
+	 <div id="modal2" class="modal">
+			<div class="modal-content">
+			  <h4>Sinasefe-sp Hotspot</h4>
+			  <p>Sindicato Nacional dos Servidores Federais da Educação Básica, Profissional e Tecnológica.</p>
+			  <table class="striped">
+			  <tr>
+				<td><i class="material-icons">call</i></td>
+				<td>(11) 3228-7208 / (11) 3315-9018</td>
+			  </tr>
+			  <tr>
+				<td><i class="material-icons">grade</i></td>
+				<td>www.sinasefe.org.br</td>
+			  </tr>
+			  <tr>
+				<td style="width:30px;"><i class="material-icons">business</i></td>
+				<td>Rua Pedro Vicente, 625  Canindé - São Paulo SP  CEP 01109-010</td>
+			  </tr>
+			</table>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons left">thumb_up</i>OK</a>
+			</div>	
+     </div>	 
+
+<!--  Scripts-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  
+  <script>
+	$(document).ready(function() {
+	  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+	  $('.modal-trigger').leanModal();
+	});
+  </script>
+  
+  $(if error)
+  <script>
+  	Materialize.toast('<span>$(error)</span>', 3000)
+  </script>
+  $(endif)
+
+  <script type="text/javascript">
+	  <!--
+	  document.login.username.focus();
+	  //-->
+  </script>
+
+  </body>
+</html>
